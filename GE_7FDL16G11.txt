@@ -43,9 +43,9 @@ EngineBehavior = array(1,  0,  0,  0,  0,  0,  0,  0)
 #3 - No Change
 #4 - Override (Full Sweep)
                 #0-1  1-2  2-3  3-4  4-5  5-6  6-7  7-8 
-UpDelays = array(1750,530,670,660,592,765,679,493) 
+UpDelays = array(1750,4630,6310,4090,2570,2940,3120,2130) 
                   #8-7  7-6  6-5  5-4  4-3  3-2  2-1 1-0
-DownDelays = array(576,717,517,407,490,671,705,1674)
+DownDelays = array(3240,3900,1560,1470,1700,2730,2060,1674)
 
 UpOverrides = array(
     "", #0-1
