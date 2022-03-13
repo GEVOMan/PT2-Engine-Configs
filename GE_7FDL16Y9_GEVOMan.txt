@@ -80,10 +80,10 @@ CompressorOff = "lazpack/misc/compressors/wabtec_3cdcla_end.wav"
 DynamicsOn = "lazpack/misc/dynamics_ge_dash9_loop.wav"
 DynamicsOff = "lazpack/misc/dynamics_ge_dash9_end.wav"
 
-PrimeOn = "lazpack/gefdl16y9/prime_loop.wav"
-PrimeOff = "lazpack/gefdl16y9/prime_end.wav"
+PrimeOn = "wam98_sounds/trains/engines/ge7fdl16z/prime_loop.wav"
+PrimeOff = "wam98_sounds/trains/engines/ge7fdl16z/prime_end.wav"
 
-PrimerDuration = 2 #randint(10,15)
+PrimerDuration = randint(10,15)
 
 SoundDurations = table()
 SoundDurations["lazpack/gefdl16y9/transitions/up/0-1.wav",number] = 1520
