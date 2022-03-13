@@ -1,6 +1,6 @@
 # PT2-Engine-Configs
 Engine config files for RLCPT2 use with my soundsets.
-All of these should be drop-in configs to be put in your ptgamma/engines directory in expression2 except for the EMD 16-710G3C-T2 and the GE 7FDL16Y9. For the EMD 16-710G3C-T2 and the GE 7FDL16Y9, you must make an edit to RLCPT2 for them to work to their best potential. See below.
+All of these should be drop-in configs to be put in your ptgamma/engines directory in expression2, except for the EMD 16-710G3C-T2 and the GE 7FDL16Y9. For the EMD 16-710G3C-T2 and the GE 7FDL16Y9, you must make an edit to RLCPT2 for them to work to their best potential. See below.
 # PT2 Edit (if necessary)
 At line 456, you will find a statement that looks like this:
 
