@@ -44,7 +44,7 @@ EngineBehavior = array(1,  0,  0,  0,  0,  0,  0,  0)
                 #0-1 1-2  2-3  3-4  4-5  5-6  6-7  7-8 
 UpDelays = array(1717,1109,1186,1290,1578,1563,1715,1099) 
                    #8-7  7-6  6-5  5-4  4-3  3-2  2-1  1-0
-DownDelays = array(1823,1617,1537,2316,1428,2968,835,5248)
+DownDelays = array(1823,1617,1537,2310,1422,2968,835,5248)
 
 UpOverrides = array(
     "gevoman/trains/engines/emd645ev16/transitions/up/0-1.wav", #0-1
@@ -82,7 +82,7 @@ DynamicsOff = "gsgtrainsounds/misc/delco_dynfan_end.wav"
 PrimeOn = "gsgtrainsounds/emd645ev16/prime_loop.wav"
 PrimeOff = "gsgtrainsounds/emd645ev16/prime_end.wav"
 
-PrimerDuration = 2
+PrimerDuration = randint(10,15)
 
 SoundDurations = table()
 SoundDurations["gevoman/trains/engines/emd645ev16/transitions/up/0-1.wav",number] = 1710
