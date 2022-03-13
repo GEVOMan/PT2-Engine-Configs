@@ -89,10 +89,10 @@ CompressorOff = "gsgtrainsounds/misc/compressors/gardner-denver_wla-sc_sd70mac/g
 DynamicsOn = "gsgtrainsounds/misc/emd_late_dyn_loop.wav"
 DynamicsOff = "gsgtrainsounds/misc/emd_late_dyn_end.wav"
 
-PrimeOn = ""
-PrimeOff = ""
+PrimeOn = "gsgtrainsounds/emd645f3v16/prime_loop.wav"
+PrimeOff = "gsgtrainsounds/emd645f3v16/prime_end.wav"
 
-PrimerDuration = 0
+PrimerDuration = 15
 
 SoundDurations = table()
 SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/1-2.wav",number] = 4450
