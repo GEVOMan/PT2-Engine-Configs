@@ -10,7 +10,7 @@ For the sounds to work properly, you must remove the equation that divides the s
 
 ![image](https://user-images.githubusercontent.com/69711669/158041224-4b19783a-2daa-4c43-a430-1ba55faa962c.png)
 
-## I recommend making a variable that allows this process to be toggled on and off. Here is an example:
+## Making a variable that allows this process to be toggled on and off is highly recommended. Here is an example:
 
 #### Add variable in config of E2
 
