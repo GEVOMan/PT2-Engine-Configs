@@ -1,0 +1,120 @@
+@name ptgamma/engines/GE_7FDL16G11
+#ENGINE CONFIG
+ENG_Version = "2.0.67"
+#Silenced G series FDL engine. Accurate for GE Dash 7s and U-series with 16-cylinder engines built from 1974 until December 1979.
+EngineType = "GE 7FDL16G11" #What is the name of the Prime Mover?
+
+Startup_Hi = "gevoman/trains/engines/ge_7fdl16g11/startup.wav" #Startup Sound to put the engine in High (Normal) Idle.
+Startup_Lo = "" #Startup Sound to put the engine in Low Idle.
+Startup_Mode = 1 #0 for Low, 1 for High
+
+Shutdown_Hi = "kei/trains/engines/ge_7fdl16g11/shutdown.wav" #Shutdown Sound from High Idle.
+Shutdown_Lo = "" #Shutdown Sound from Low Idle.
+Shutdown_Mode = 1 #0 for Low, 1 for High, 2 for Both as the situation demands it
+
+FuelSaverMode = 0 #If set to 1, the locomotive will go into and out of Low Idle as the reverser is moved in and out of Neutral
+FuelSaverDelay = 0 #Time, in seconds, for engine to fall into Low Idle, if used.
+
+TransitionToLow = "" #Transition sound for High to Low idle, if used.
+TransitionToHigh = "" #Transition sound for Low to High idle, if used.
+Idle_Low = "" #Sound for Low Idle, if used.
+
+
+NumEngineNotches = 8 #Number of Engine Notches, not counting idle.
+
+Notches = array(
+    "kei/trains/engines/ge_7fdl16g11/idle.wav", #Idle 
+    "kei/trains/engines/ge_7fdl16g11/notch1.wav", #Notch 1
+    "kei/trains/engines/ge_7fdl16g11/notch2.wav", #Notch 2
+    "kei/trains/engines/ge_7fdl16g11/notch3.wav", #Notch 3
+    "kei/trains/engines/ge_7fdl16g11/notch4.wav", #And so On
+    "kei/trains/engines/ge_7fdl16g11/notch5.wav",
+    "kei/trains/engines/ge_7fdl16g11/notch6.wav",
+    "kei/trains/engines/ge_7fdl16g11/notch7.wav",
+    "kei/trains/engines/ge_7fdl16g11/notch8.wav"
+)
+
+TransitionPath = "kei/trains/engines/ge_7fdl16g11/transitions/"
+#---------------------0-1,1-2,2-3,3-4,4-5,5-6,6-7,7-8
+EngineBehavior = array(1,  0,  0,  0,  0,  0,  0,  0)
+#0 - A/B Notching
+#1 - Full Sweep
+#2 - Instant Change
+#3 - No Change
+#4 - Override (Full Sweep)
+                #0-1  1-2  2-3  3-4  4-5  5-6  6-7  7-8 
+UpDelays = array(1750,4630,6310,4090,2570,2940,3120,2130) 
+                  #8-7  7-6  6-5  5-4  4-3  3-2  2-1 1-0
+DownDelays = array(3240,3900,1560,1470,1700,2730,2060,1674)
+
+UpOverrides = array(
+    "", #0-1
+    "", #1-2
+    "", #2-3
+    "", #3-4
+    "", #4-5
+    "", #5-6
+    "", #6-7
+    ""  #7-8
+)
+
+DownOverrides = array(
+    "", #8-7
+    "", #7-6
+    "", #6-5
+    "", #5-4
+    "", #4-3
+    "", #3-2
+    "", #2-1
+    ""  #1-0
+)
+
+StartupClagDelay = 4 #Time required to hold starter for engine to turn on successfully
+StartupClagDuration = 2.25 #Duration for starter smoke
+
+CompressorType = 0 #0 for Shaft-driven, 1 for Electrical
+
+CompressorOn = "lazpack/misc/compressors/gardner-denver_wbo_b23-7/gd_wbo_loop.wav"
+CompressorOff = "lazpack/misc/compressors/gardner-denver_wbo_b23-7/gd_wbo_end.wav"
+
+DynamicsOn = ""
+DynamicsOff = ""
+
+PrimeOn = "kei/trains/engines/ge_7fdl16g11/primer_loop.wav"
+PrimeOff = "kei/trains/engines/ge_7fdl16g11/primer_end.wav"
+
+PrimerDuration = randint(10,15)
+
+SoundDurations = table()
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/0-1.wav",number] = 1750
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/1-2a.wav",number] = 520
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/1-2b.wav",number] = 4630
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/2-3a.wav",number] = 670
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/2-3b.wav",number] = 6310
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/3-4a.wav",number] = 660
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/3-4b.wav",number] = 4090
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/4-5a.wav",number] = 590
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/4-5b.wav",number] = 2570
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/5-6a.wav",number] = 760
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/5-6b.wav",number] = 2940
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/6-7a.wav",number] = 670
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/6-7b.wav",number] = 3120
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/7-8a.wav",number] = 490
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/up/7-8b.wav",number] = 2130
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/1-0.wav",number] = 1670
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/2-1a.wav",number] = 700
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/2-1b.wav",number] = 2060
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/3-2a.wav",number] = 670
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/3-2b.wav",number] = 2730
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/4-3a.wav",number] = 490
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/4-3b.wav",number] = 1700
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/5-4a.wav",number] = 400
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/5-4b.wav",number] = 1470
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/6-5a.wav",number] = 510
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/6-5b.wav",number] = 1560
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/7-6a.wav",number] = 710
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/7-6b.wav",number] = 3900
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/8-7a.wav",number] = 570
+SoundDurations["kei/trains/engines/ge_7fdl16g11/transitions/down/8-7b.wav",number] = 3240
+SoundDurations["kei/trains/engines/ge_7fdl16g11/startup.wav",number] = 10970
+SoundDurations["kei/trains/engines/ge_7fdl16g11/shutdown.wav",number] = 5850
