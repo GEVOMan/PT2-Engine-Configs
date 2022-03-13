@@ -16,12 +16,15 @@ For the sounds to work properly, you must remove the equation that divides the s
 I recommend making a variable that allows this process to be toggled on and off. Here is an example of such:
 
 Add variable in config of E2
+
 ![image](https://user-images.githubusercontent.com/69711669/158041234-b8fbd7d9-4a34-4416-9204-453e78567082.png)
 
 Persist variable at the top of the E2
+
 ![image](https://user-images.githubusercontent.com/69711669/158041265-b1c1fc25-25ee-41f8-a6ef-80480494cafa.png)
 
 Insert "if" statement where variable DR was defined
+
 ![image](https://user-images.githubusercontent.com/69711669/158041188-d4633ba8-fbce-448c-a577-7abefd6d0385.png)
 
 
