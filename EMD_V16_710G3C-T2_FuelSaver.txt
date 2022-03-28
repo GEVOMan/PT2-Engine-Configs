@@ -1,7 +1,7 @@
 @name ptgamma/engines/EMD_V16_710G3C-T2_FuelSaver
 #ENGINE CONFIG
 ENG_Version = "2.0.68"
-#For use in the EMD SD70ACe and non-Norfolk Southern EMD SD70M-2s.
+#For use in the EMD SD70ACe and non-Norfolk Southern EMD SD70M-2s built before January 2012.
 EngineType = "EMD 16-710G3C-T2" #What is the name of the Prime Mover?
 
 Startup_Hi = "" #Startup Sound to put the engine in High (Normal) Idle.
@@ -19,15 +19,15 @@ TransitionToLow = "gevoman/trains/engines/emd710g3ct2v16/transitions/down/idle_h
 TransitionToHigh = "gevoman/trains/engines/emd710g3ct2v16/transitions/up/0-idle_high.wav" #Transition sound for Low to High idle, if used.
 Idle_Low = "gevoman/trains/engines/emd710g3ct2v16/idle.wav" #Sound for Low Idle, if used.
 
-EIIS_Enabled = 0 #EIIS Stands for EMD's Insane Idling System. God help you if you actually have to change these.
-EIIS_HigherIdle = "" 
-EIIS_HighToHigher = ""
-EIIS_LowToHigher = ""
-EIIS_HigherToHigh = ""
-EIIS_HigherToLow = ""
+EIIS_Enabled = 1 #EIIS Stands for EMD's Insane Idling System. God help you if you actually have to change these.
+EIIS_HigherIdle = "gevoman/trains/engines/emd710g3ct2v16/notch2.wav" 
+EIIS_HighToHigher = "gevoman/trains/engines/emd710g3ct2v16/transitions/up/1-2.wav"
+EIIS_LowToHigher = "gevoman/trains/engines/emd710g3ct2v16/transitions/up/0-2.wav"
+EIIS_HigherToHigh = "gevoman/trains/engines/emd710g3ct2v16/transitions/down/2-1.wav"
+EIIS_HigherToLow = "gevoman/trains/engines/emd710g3ct2v16/transitions/down/2-0.wav"
 EIIS_HigherTo2 = ""
 EIIS_2ToHigher = ""
-EIIS_Shutdown_Higher = ""
+EIIS_Shutdown_Higher = "gevoman/trains/engines/emd710g3ct2v16/shutdown_higher.wav"
 
 NumEngineNotches = 8 #Number of Engine Notches, not counting idle.
 
@@ -52,9 +52,9 @@ EngineBehavior = array(3,  0,  0,  0,  0,  0,  0,  0)
 #3 - No Change
 #4 - Override (Full Sweep)
                 #0-1  1-2  2-3  3-4  4-5  5-6  6-7  7-8 
-UpDelays = array(3833,2373,2378,4581,2490,2616,2412,3412)
+UpDelays = array(3879,2513,1891,4053,2990,2303,4329,3107)
                   #8-7  7-6  6-5  5-4  4-3  3-2  2-1
-DownDelays = array(2808,2922,2121,2468,3821,4114,1753,3764)
+DownDelays = array(2766,2935,2549,2554,3810,3041,2264,4298)
 
 UpOverrides = array(
     "", #0-1
@@ -95,41 +95,41 @@ PrimeOff = "gsgtrainsounds/emd645f3v16/prime_end.wav"
 PrimerDuration = 15
 
 SoundDurations = table()
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/1-2.wav",number] = 4450
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/0-1a.wav",number] = 940
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/0-1b.wav",number] = 4840
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/1-2a.wav",number] = 970
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/1-2b.wav",number] = 3480
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/2-3a.wav",number] = 910
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/2-3b.wav",number] = 3660
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/3-4a.wav",number] = 730
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/3-4b.wav",number] = 5690
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/4-5a.wav",number] = 540
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/4-5b.wav",number] = 3100
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/5-6a.wav",number] = 590
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/5-6b.wav",number] = 3160
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/6-7a.wav",number] = 550
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/6-7b.wav",number] = 3320
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/7-8a.wav",number] = 680
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/7-8b.wav",number] = 5990
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/2-1.wav",number] = 3410
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/1-0a.wav",number] = 840
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/1-0b.wav",number] = 7030
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/2-1a.wav",number] = 700
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/2-1b.wav",number] = 2710
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/3-2a.wav",number] = 500
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/3-2b.wav",number] = 5130
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/4-3a.wav",number] = 440
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/4-3b.wav",number] = 4710
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/5-4a.wav",number] = 520
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/5-4b.wav",number] = 2970
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/6-5a.wav",number] = 520
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/6-5b.wav",number] = 2910
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/7-6a.wav",number] = 660
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/7-6b.wav",number] = 3650
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/8-7a.wav",number] = 740
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/8-7b.wav",number] = 3580
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/idle_high-0.wav",number] = 7880
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/0-idle_high.wav",number] = 5790
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/startup.wav",number] = 18220
-SoundDurations["gevoman/trains/engines/emd710g3ct2v16/shutdown.wav",number] = 9710
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/1-2.wav",number] = 3880
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/0-1a.wav",number] = 780
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/0-1b.wav",number] = 4570
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/1-2a.wav",number] = 720
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/1-2b.wav",number] = 3170
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/2-3a.wav",number] = 790
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/2-3b.wav",number] = 2490
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/3-4a.wav",number] = 600
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/3-4b.wav",number] = 4750
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/4-5a.wav",number] = 640
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/4-5b.wav",number] = 3610
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/5-6a.wav",number] = 450
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/5-6b.wav",number] = 2730
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/6-7a.wav",number] = 490
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/6-7b.wav",number] = 4830
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/7-8a.wav",number] = 500
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/7-8b.wav",number] = 5750
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/2-1.wav",number] = 3740
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/1-0a.wav",number] = 800
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/1-0b.wav",number] = 7830
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/2-1a.wav",number] = 750
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/2-1b.wav",number] = 2960
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/3-2a.wav",number] = 810
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/3-2b.wav",number] = 3630
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/4-3a.wav",number] = 680
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/4-3b.wav",number] = 4400
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/5-4a.wav",number] = 550
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/5-4b.wav",number] = 3290
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/6-5a.wav",number] = 740
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/6-5b.wav",number] = 3370
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/7-6a.wav",number] = 590
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/7-6b.wav",number] = 3750
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/8-7a.wav",number] = 570
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/8-7b.wav",number] = 3470
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/down/idle_high-0.wav",number] = 8640
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/transitions/up/0-idle_high.wav",number] = 5310
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/startup.wav",number] = 17060
+SoundDurations["gevoman/trains/engines/emd710g3ct2v16/shutdown.wav",number] = 15050
